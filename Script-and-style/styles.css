@@ -1,0 +1,82 @@
+body {
+    font-family: Arvo, sans-serif;
+    background-image: linear-gradient(#a019b8, rgb(235, 173, 208));
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+#errorCard {
+    color: red;
+    display: none;
+}
+
+.payment-container {
+    background-color: #a5aeaa;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    width: 450px;
+    text-align: center;
+}
+
+.algerian {
+    text-shadow: 1px 1px 0 #FFFFFF, 2px 2px 0 #000000;
+}
+
+;
+
+#cardNumber {
+    width: 400px;
+}
+
+h1 {
+    font-family: id='algerian';
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"] {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button[type="button"] {
+    background-color: #00d0ffd0;
+    color: #080505;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button[type="submit"] {
+    background-color: #00ff1ad0;
+    color: #080505;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button[type="Clear"] {
+    background-color: #ff0044d0;
+    color: #080505;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
