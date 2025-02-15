@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Symmetric Decryptor</title>
+    
+    <style>
+        body {
+            font-family:Arvo, sans-serif;
+            background-image:linear-gradient(#a019b8,rgb(235,173,208)) ;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color:pink;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        label {
+            font-family: Arvo, sans-serif;
+            font-size:2ch;
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .result1 {
+            margin-top: 20px;
+            display: none;
+        }
+
+        #rsaDecryptedCVV, #commonKey1, #originalCVV {
+            width: 100%;
+            padding: 8px;
+            margin: 8px;
+            border-radius: 4px;
+            display: inline-block;
+        }
+
+        #cancel {
+            background-color:RED;
+            color:white;
+            padding: 8px;
+            border: none;
+            border-radius: 4px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+
+        #cancel:hover {
+            background-color: #999;
+        }
+
+        #rsaCiphertext {
+            word-wrap: break-word;
+            max-width: 4ch;
+        }
+
+        #commonKey1{
+            width: 30%;
+        }
+
+        #rsaDecryptedCVV{
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-weight: bold;
+            font-size: 2.5ch;
+            color: #665f5f;
+        }
+
+        label {
+            font-family: Arvo, sans-serif;
+            font-size:2ch;
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+            font-weight: bold;
+        }
+        #ORIGINALCVV{
+            
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-weight: bold;
+            font-size: 3ch;
+            color: #2f2b2b;
+        
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>SYMMETRIC DECRYPTOR</h1>
+        <label for="rsaDecryptedCVV1">RSA DECRYPTED CVV:</label>
+        <span id="rsaDecryptedCVV" name="rsaDecryptedCVV"></span>
+
+        <label for="commonKey2">ENTER COMMON KEY:</label>
+        <input type="text" id="commonKey1" name="commonKey1" required><br><br>
+        <div id="decb">
+        <button type="button" id="decryptButton"onclick="dec2()">Decrypt</button></div>
+        <div class="result1" id="result1">
+            <h3>AFTER DECRYPTION</h3>
+            <label>Original CVV:</label>
+            <span id="ORIGINALCVV"></span><br>
+            <button id="cancel" onclick="cancel3()">Cancel</button>
+            <button id="exit" onclick="window.location.href='https://www.google.com'" target="_blank">EXIT</button>
+
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

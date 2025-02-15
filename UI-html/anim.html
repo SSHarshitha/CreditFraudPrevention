@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Online Fraud Prevention</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-image: url("card.jpg");
+      background-size: cover;
+    }
+	
+  * {
+  margin:0;
+  padding:0;
+  font-family: 'Arvo';
+}
+
+
+body{
+  background-color: #E63946;
+}
+
+.main{
+  height:100vh;
+  width:100%;  
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+}
+h1{
+  text-align:center;
+  text-transform: uppercase;
+  color: white; 
+  font-size: 4rem;
+  margin:auto;
+}
+    button {
+      padding: 30px 30px;
+      font-size: 29px;
+      background-color:dogger rgb(153, 255, 0);
+      color: rgb(224, 12, 12);
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      text-align:center;
+      margin:auto;
+      display:flex;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #00b32a;
+    }
+
+.roller{
+  height: 4.125rem;
+  line-height: 4rem;
+  position: relative;
+  overflow: hidden; 
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  color:rgb(255, 255, 255);
+}
+
+
+#spare-time{
+  font-size: 1rem;
+  font-style: italic;
+  letter-spacing: 1rem;
+  margin-top: 0;
+  color: white;
+  
+}
+
+.roller #rolltext {
+  position: absolute;
+  top: 0;
+  animation: slide 5s infinite;  
+}
+
+@keyframes slide {
+  0%{
+    top:0;
+  }
+  25%{
+    top: -4rem;    
+  }
+  50%{
+    top: -8rem;
+  }
+  72.5%{
+    top: -12.25rem;
+  }
+}
+
+@media screen and (max-width: 600px){
+  h1{
+  text-align:center;
+  text-transform: uppercase;
+  color: white; 
+  font-size: 2.125rem;
+}
+  
+  .roller{
+  height: 2.6rem; 
+  line-height: 2.125rem;  
+  }
+  
+  #spare-time {
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+  }
+  
+  .roller #rolltext {  
+  animation: slide-mob 5s infinite;  
+}
+  
+  @keyframes slide-mob {
+  0%{
+    top:0;
+  }
+  25%{
+    top: -2.125rem;    
+  }
+  50%{
+    top: -4.25rem;
+  }
+  72.5%{
+    top: -6.375rem;
+  }
+}
+}
+ </style>
+</head>
+<body>
+<div class="main">
+  <h1>PREVENTION <div class="roller">
+    <span id="rolltext">OF CARD<br/>
+    PAYMENT<br/>
+    FRADULENT<br/>
+    <span id="spare-time">PROCEED PAYMENT</span><br/>
+    
+   </div>
+    </h1>
+   <button onclick="proceed()">PROCEED</button>
+
+  <!-- JavaScript function for button action -->
+  <script>
+    function proceed() {
+    
+      window.location.href="main.html";
+    }
+  </script>
+    
+</body>
+</html>

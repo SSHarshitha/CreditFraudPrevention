@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CVV Encryption</title>
+    <style>
+        /* CSS styles */
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .cvv-container {
+            margin: 20px;
+        }
+
+        .button-container {
+            margin: 20px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cvv-container">
+        <label for="cvv">CVV:</label>
+        <div id="cvv1"></div>
+    </div>
+
+    <div class="button-container">
+        <button id="encryptButton">Encrypt CVV</button>
+    </div>
+
+    <div>
+        <h2>Encrypted CVV:</h2>
+        <p id="encryptedCvv"></p>
+    </div>
+
+    <div>
+        <h2>Symmetric Key (AES):</h2>
+        <p id="symmetricKey"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

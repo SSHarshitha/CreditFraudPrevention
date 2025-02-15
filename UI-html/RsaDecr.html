@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>
+    RSA Decryption
+  </title>
+  <style>
+    body {
+      font-family: Young serif, sans-serif;
+            background-image:linear-gradient(#a019b8,rgb(235,173,208));
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+    }
+
+    .container {
+      background-color: pink;
+      text-align: center;
+      margin: 0 auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-shadow: 2px 2px 5px #888;
+    }
+
+  
+      
+      label {
+            font-family: Arvo, sans-serif;
+            font-size:2ch;
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+            font-weight: bold;
+        }
+    
+
+    input[type="text"],
+    input[type="password"] {
+      width: 20%;
+      padding: 10px;
+      margin-top: 10px;
+      align-items: center;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+    }
+    .word {
+    width: 200px;
+    overflow-wrap: break-word;  
+    word-wrap: break-word; 
+    word-break: break-word;
+}
+
+    button {
+      padding: 10px 20px;
+      background-color: #0074cc;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin: 10px;
+    }
+
+    button:hover {
+      background-color: #005aa7;
+    }
+
+    #decryptedValue{
+      width: fit-content;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>RSA DECRYPTOR</h1>
+    <label for="encryptedValue">Encrypted value:</label><br>
+    <textarea id="encryptedValue" name="encryptedValue" rows="5" cols="60" readonly></textarea>
+    <span id="encryptedValue"></span><br><br>
+    <div id="decB">
+    <button id="decryptButton" onclick="decrypt()">Decrypt</button></div>
+
+    <div id="decryptRsa" style="display: none;">
+    <label for="privateKey">Private key:</label>
+    <textarea id="privateKey" name="privateKey" rows="5" cols="70" readonly></textarea><br>
+    
+
+    <label for="decryptedValue">Decrypted value:</label>
+    <input type="text" id="decryptedValue" placeholder="Decrypted value" readonly><br><br>
+
+    <button id="cancelButton" onclick="cancel2()">Cancel</button>
+    <button id="copyButton" onclick="copyToSym()">Copy to Symmetric Encryption</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

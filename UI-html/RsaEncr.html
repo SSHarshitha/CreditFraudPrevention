@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RSA Encryptor</title>
+    <script src="script.js"></script>
+    <style>
+        body {
+            font-family: Arvo, sans-serif;
+            background-image:linear-gradient(#a019b8,rgb(235,173,208));
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color:pink;
+            padding: 50px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        p {
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .result {
+            margin-top: 20px;
+            display: none;
+        }
+
+        .encrypted-label {
+            display: block;
+            background-color:pink;
+            padding: 8px;
+            margin: 8px;
+            border-radius: 4px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        #publicKey, #rsaCiphertext {
+            width: 100%;
+            padding: 8px;
+            margin: 8px;
+            border-radius: 4px;
+            display: inline-block;
+        }
+	button{
+		color:white;
+	}
+
+        #cancel{
+            background-color:red;
+            color: white;
+            padding: 8px;
+            border: none;
+            border-radius: 4px;
+            margin-top: 10px;
+            margin-right: 5px;
+            cursor: pointer;
+        }
+	 #copyToDecrypt {
+            background-color:DeepSkyBlue;
+            color:white;
+            padding: 8px;
+            border: none;
+            border-radius: 4px;
+            margin-top: 10px;
+            margin-right: 5px;
+            cursor: pointer;
+        }
+        #copyToDecrypt:hover {
+            background-color: #999;
+        }
+
+        label {
+            font-family: Arvo, sans-serif;
+            font-size:2ch;
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+            font-weight: bold;
+        }
+
+        #symmetricCiphertext{
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-weight: bold;
+            font-size: 2.5ch;
+            color: #746262;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>RSA ENCRYPTOR</h1>
+        
+        <form>
+            <label for="symmetricCiphertext1">SYMMETRIC CIPHER TEXT:</label>
+            <span id="symmetricCiphertext" name="symmetricCiphertext"></span><br><br>
+
+            <button type="button" onclick="encrypt1()">Encrypt</button>
+        </form>
+
+        <div class="result" id="result">
+            <label class="encrypted-label">PUBLIC KEY:</label>
+            <input type="text" id="publicKey" readonly><br>
+
+            <label class="encrypted-label">RSA CIPHER TEXT:</label>
+            <input type="text" id="rsaCiphertext" readonly><br>
+
+            <button id="cancel" onclick="cancel1()">Cancel</button>
+            <button id="copyToDecrypt" onclick="proc()">Next</button>
+        </div>
+    </div>
+
+</body>
+</html>

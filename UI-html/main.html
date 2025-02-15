@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Card Payment</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <div class="payment-container">
+        <h1>Card Payment</h1>
+        <form id="payment-form" action="symmEnc.html" method="POST" onsubmit="handlePaymentForm()">
+            <label for="card-number">Card Number:</label>
+            <input type="text" id="cardNumber" name="cardNumber" placeholder="1234 5678 9012 3456" required><br>
+            <div id="errorCard" style="color: red; display: none;">Invalid card number.</div><br>
+            <label for="card-name">Name on card:</label>
+            <input type="text" id="card-name" name="cardName" placeholder="Mr Arun" required><br><br>
+
+            <input type="text" id="otpInput" placeholder="Enter OTP">
+            <button type="button" id="generateOTP">Generate OTP</button>
+            <button type="button" id="verifyOTP">Verify OTP</button><br><br>
+            <div id="otp" style="display: none;">
+                <label for="expiry-date">Expiry Date:</label><br>
+                <input type="month" id="expiry-date" name="expiryDate" placeholder="MM/YY" required
+                    min="2010-01"><br><br>
+                <label for="cvv">CVV:</label><br>
+                <input type="password" id="cvv" name="cvv" placeholder="123" required><br>
+                <!-- Add a honeypot input field to trap bots -->
+                <input type="text" id="honeypot" name="honeypot" placeholder="Honeypot captcha for Bot submission." style="display: none;"><br>
+            </div>
+            <span id="countdown" style="display: none;"></span>
+            <button type="submit" onclick="checkBots('payment-form',event)">Pay Now</button>
+            <button type="Clear" onclick="reset()">Clear All</button>
+        </form>
+    </div>
+    
+</body>
+
+</html>
