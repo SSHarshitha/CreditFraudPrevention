@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Symmetric Encryptor</title>
+    <script src="script.js" defer></script>
+    <style>
+        body {
+            font-family: Young serif, sans-serif;
+            background-image:linear-gradient(#a019b8,rgb(235,173,208));
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color:pink;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        p {
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: inline-block;
+            margin-bottom: 8px;
+            color: #0f0e0e;
+            background-color: #eee;
+            padding: 8px;
+            margin: 8px;
+            border-radius: 6px;
+            font-weight: bold;
+            text-align: center;
+           
+
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        #result_enc {
+            display: none;
+            margin-top: 20px;
+        }
+
+        .encrypted-label {
+            display: inline-block;
+            background-color: #eee;
+            padding: 8px;
+            margin: 8px;
+            border-radius: 4px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        #encryptedCVV, #usedKey ,#CVVNumber{
+            
+            display:block;
+            background-color: #eee;
+            padding: 8px;
+            margin: 8px;
+            border-radius: 4px;
+            color: black;
+            text-align: center;
+        
+        }
+
+        #cancel{
+            background-color:red;
+            color: #333;
+            padding: 8px;
+            border: none;
+            border-radius: 4px;
+            margin-top: 10px;
+            margin-left: 5px;
+            cursor: pointer;
+        }
+	#copy {
+            background-color:Tomato;
+            color: #333;
+            padding: 8px;
+            border: none;
+            border-radius: 4px;
+            margin-top: 10px;
+            margin-left: 5px;
+            cursor: pointer;
+        }
+        #copy:hover {
+            background-color:blue;
+        }
+        #commonKey{
+            width: auto;
+        }
+
+        #cvv1{
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-weight: bold;
+            font-size: 2.5ch;
+            color: #2f2b2b;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>SYMMETRIC ENCRYPTOR</h1>
+        <h3>BEFORE ENCRYPTION:</h3>
+        <form>
+            <label for="cvv2">CVVNumber:</label><br>
+            <span id="cvv1"> </span><br><br>
+
+            <label for="commonKey">Common Key:</label>
+            <input type="password" id="commonKey" name="commonKey" required>
+
+            <button type="button" onclick="encrypt()">Encrypt</button>
+        </form>
+        
+        <div id="result_enc">
+            <h3>AFTER ENCRYPTION:</h3>
+            <label class="encrypted-label">Encrypted CVV Number:</label>
+            <span id="encryptedCVV"></span><br>
+
+            <label class="encrypted-label">Key Used:</label>
+            <span id="usedKey"></span>
+
+            <button id="cancel" onclick="cancel()">Cancel</button>
+            <button id="copy" onclick="copyToRSA()">Copy to RSA</button>
+        </div>
+        
+    </div>
+
+    
+</body>
+</html>
